@@ -1,0 +1,129 @@
+<?php if($_GET['mode'] == ""){
+        header('location: https://mcapi-th.cf/?mode=mobile');
+    }
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MCAPI TH</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <?php 
+    @ini_set('display_errors', '0');
+    if($_GET['mode'] == "mobile"){
+    echo '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">';
+    }       
+    ?>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" integrity="sha256-3YM6A3pH4QFCl9WbSU8oXF5N6W/2ylvW0o2g+Z6TmLQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php include_once('sys/header.php'); ?>
+  </head>
+  <body class="col-md-12 mx-auto">
+  <?php include_once('sys/menu.php'); ?>
+  <br />
+  <br />
+      <div class="card text-white bg-success">
+        <img class="card-img-top" alt="">
+        <div class="card-body">
+          <h4 class="card-title">Usage</h4>
+          <p class="card-text">ยินดีต้อนรับสู่ MCAPI TH</p>
+        </div>
+      </div>
+        <br />
+        <div class="card">
+            <img class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 class="card-title">การใช้ APIs</h4>
+                <p class="card-text" style="font-size: 17px">เริ่มต้นให้เข้าไปที่ https://mcapi-th.cf/mcapi/v1/status/api.php?host=Ipเซิร์ฟเวอร์&port=Portเซิร์ฟเวอร์</p>
+                <div class="card">
+            <img class="card-img-top"alt="">
+            <div class="card-body">
+            <h4 class="card-title">ตัวอย่างการเรียกใช้ APIs</h4>
+            <p class="card-text" style="font-size: 17px">e.g https://mcapi-th.cf/mcapi/v1/status/api.php?host=sg.lbsg.net&port=19132 </p>
+            <p class="card-text" style="font-size: 20px"><code class="php hljs">
+            <span class="hljs-string table-responsive">
+{ <br/>
+    "<font color="green">status</font>": "Online",<br/>
+    "<font color="green">platform</font>": "Minecraft: Bedrock Edition",<br/>
+    "<font color="green">gametype</font>": "SMP",<br/>
+    "<font color="green">game_id</font>": "MINECRAFTPE",<br/>
+    "<font color="green">motd</font>": {<br/>
+        &nbsp&nbsp"<font color="orange">ingame</font>": "{-name-:-Lifeboat Survival Games-,-node-:{-type-:-SG-,-ip-:-sg2.lbsg.net-,-players-:45,-maxplayers-:90,-tps-:19.3}}",<br/>
+        &nbsp&nbsp"<font color="orange">clean</font>": "{-name-:-Lifeboat Survival Games-,-node-:{-type-:-SG-,-ip-:-sg2.lbsg.net-,-players-:45,-maxplayers-:90,-tps-:19.3}}",<br/>
+        &nbsp&nbsp"<font color="orange">html</font>": "{-name-:-Lifeboat Survival Games-,-node-:{-type-:-SG-,-ip-:-sg2.lbsg.net-,-players-:45,-maxplayers-:90,-tps-:19.3}}"<br/>
+    },<br/>
+    "<font color="green">host</font>": {<br/>
+        &nbsp&nbsp"<font color="orange">host</font>": "sg.lbsg.net",<br/>
+        &nbsp&nbsp"<font color="orange">hostip</font>": "172.81.102.34",<br/>
+        &nbsp&nbsp"<font color="orange">port</font>": 19132<br/>
+    },<br/>
+    "<font color="green">version</font>": {<br/>
+        &nbsp&nbsp"<font color="orange">version</font>": "v1.x",<br/>
+        &nbsp&nbsp"<font color="orange">software</font>": "PocketMine-Steadfast 1.5.1-hybrid",<br/>
+        &nbsp&nbsp"<font color="orange">plugins</font>": [<br />
+        &nbsp&nbsp&nbsp&nbsp"SurvivalGames 1.0.0",<br/>
+        &nbsp&nbsp&nbsp&nbsp"LbCore 1.0.0"<br/>
+        &nbsp&nbsp]<br/>
+        &nbsp},<br/>
+    "<font color="green">queryinfo</font>": {<br/>
+        &nbsp&nbsp"<font color="orange">agreement</font>": "Query",<br/>
+        &nbsp&nbsp"<font color="orange">processed</font>": "1.0025"<br/>
+    },<br/>
+    "<font color="green">players</font>": {<br/>
+        &nbsp&nbsp"<font color="orange">max</font>": 5000,<br/>
+        &nbsp&nbsp"<font color="orange">online</font>": 3839,<br/>
+        &nbsp&nbsp"<font color="orange">players</font>": [<br/>
+        &nbsp&nbsp&nbsp&nbsp"aikaushiushi",<br/>
+        &nbsp&nbsp&nbsp&nbsp"SoleSumo9846274",<br/>
+        &nbsp&nbsp&nbsp&nbsp"mizukiyurika",<br/>
+        &nbsp&nbsp&nbsp&nbsp"RuralTugboat388"<br/>
+        &nbsp&nbsp&nbsp&nbsp]<br/>
+        &nbsp&nbsp}<br/>
+        &nbsp}
+</span>
+</code></p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="card">
+            <img class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Code Example PHP</h4>
+                <p class="card-text" style="font-size: 17px">เริ่มต้นนั้นให้เขียนด้วยการเปิด Tag PHP จากนั้นตามด้วยโค๊ดด้านล่าง</p>
+                <p class="card-text"><code class="php hljs"><span class="hljs-comment">//ทำการประกาศตัวเเปร $api สำหรับใช้เรียกค่าจาก APIs มาแสดง</span> <br /> 
+                <span class="hljs-string">$api = json_decode(file_get_contents('https://mcapi-th.cf/mcapi/v1/status/api.php?host=sg.lbsg.net&port=19132'));</span><br />
+                <span class="hljs-comment">//ทำการใช้ echo เพื่อดึงค่าจาก APIs มาแสดง ณ ที่นี้ จะขอดึงชื่อเซิร์ฟเวอร์มาเเสดง </span><br />
+                <span class="hljs-string">echo $api-><font color="green">motd</font>-><font color="orange">ingame</font>;</span>
+                </code></p><br />
+                <p class="card-text"><code class="php hljs"><span class="hljs-comment">//ผลลัพธ์ของค่าที่ดึงมาแสดง </span><br />
+                <span class="hljs-comment">//ชื่อของเซิร์ฟเวอร์ LiftBoat ที่ดึงมาเเสดงนั้นดูเเปลกๆ เเต่ไม่ได้เกิดจากข้อผิดพลาดของ APIs </span><br />
+                <span class="hljs-string">{-name-:-Lifeboat Survival Games-,-node-:{-type-:-SG-,-ip-:-sg2.lbsg.net-,-players-:45,-maxplayers-:90,-tps-:19.3}}</span></code>
+                </p>
+                </div>
+            </div>
+            <br />
+        <div class="card">
+            <img class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+            </div>
+        </div>
+        <br />
+        <div class="card text-center">
+            <div class="card-footer text-muted">
+                <i class="fa fa-copyright" aria-hidden="true"> <i>Copyright 2018 @ Kittisak</i></i>
+            </div>
+        </div>
+        <br />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
