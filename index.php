@@ -1,6 +1,5 @@
-<?php if($_GET['mode'] == ""){
-        header('location: http://localhost/?mode=mobile');
-    }
+<?php 
+
     ?>
 <!DOCTYPE html>
 <html lang="en">
