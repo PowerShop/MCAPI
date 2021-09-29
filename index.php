@@ -1,5 +1,5 @@
 <?php if($_GET['mode'] == ""){
-        header('location: https://mcapi-th.cf/?mode=mobile');
+        header('location: http://localhost/?mode=mobile');
     }
     ?>
 <!DOCTYPE html>
